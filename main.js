@@ -1,21 +1,16 @@
 import fetch from "node-fetch";
+import fs from "fs";
 
-const finalCookieString = 
 
-const characterIds = [	583401
-,   583402
-, 583403
-, 583404
-,  583405
-,   583406
-,  583407
-,  	583408
-,  583409
-, 583410
-,	583411
+const finalCookieString = fs.readFileSync("cookie.config", "utf-8").trim();
+
+const characterIds = [
+    583401, 583402, 583403, 583404, 583405, 
+    583406, 583407, 583408, 583409, 583410, 
+    583411
 ];
 
-async function getPlayerEquipContents() {
+async function getPlayerEquipContents(player, unitid) {
     const response = await fetch("https://api.blablalink.com/api/game/proxy/Tools/GetPlayerEquipContents", {
         method: "POST",
         headers: {
@@ -31,7 +26,7 @@ async function getPlayerEquipContents() {
                 language: "en",
                 env: "prod",
                 data_statistics_scene: "outer",
-                data_statistics_page_id: "https://www.blablalink.com/shiftyspad/nikke/835",
+                data_statistics_page_id: `https://www.blablalink.com/shiftyspad/home?uid=${player.uid}`,
                 data_statistics_client_type: "pc_web",
                 data_statistics_lang: "en"
             }),
@@ -52,12 +47,16 @@ async function getPlayerEquipContents() {
     return data;
 }
 
-// Execute and print the response
-(async () => {
-    try {
-        const result = await getPlayerEquipContents();
-        console.log("Response:", JSON.stringify(result, null, 4));
-    } catch (error) {
-        console.error("Error:", error);
-    }
-})();
+const playersData = JSON.parse(fs.readFileSync("players.json", "utf-8"));
+const players = Object.keys(playersData).map(key => ({ uid: playersData[key] }));
+
+for (const player of players) {
+    (async () => {
+        try {
+            const result = await getPlayerEquipContents(player, unit);
+            console.log(`Response for player ${player.uid}:`, JSON.stringify(result, null, 4));
+        } catch (error) {
+            console.error(`Error for player ${player.uid}:`, error);
+        }
+    })();
+}
