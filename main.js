@@ -3,14 +3,11 @@ import fs from "fs";
 
 
 const finalCookieString = fs.readFileSync("cookie.config", "utf-8").trim();
+const playersData = JSON.parse(fs.readFileSync("players.config", "utf-8"));
+const unitData = JSON.parse(fs.readFileSync("units.config", "utf-8"));
 
-const characterIds = [
-    583401, 583402, 583403, 583404, 583405, 
-    583406, 583407, 583408, 583409, 583410, 
-    583411
-];
 
-async function getPlayerEquipContents(player, unitid) {
+async function getPlayerEquipContents(link, unitid, body) {
     const response = await fetch("https://api.blablalink.com/api/game/proxy/Tools/GetPlayerEquipContents", {
         method: "POST",
         headers: {
@@ -26,7 +23,7 @@ async function getPlayerEquipContents(player, unitid) {
                 language: "en",
                 env: "prod",
                 data_statistics_scene: "outer",
-                data_statistics_page_id: `https://www.blablalink.com/shiftyspad/home?uid=${player.uid}`,
+                data_statistics_page_id: `https://www.blablalink.com/shiftyspad/nikke/${unitid}?uid=${link}`,
                 data_statistics_client_type: "pc_web",
                 data_statistics_lang: "en"
             }),
@@ -47,9 +44,26 @@ async function getPlayerEquipContents(player, unitid) {
     return data;
 }
 
-const playersData = JSON.parse(fs.readFileSync("players.json", "utf-8"));
-const players = Object.keys(playersData).map(key => ({ uid: playersData[key] }));
+function getBody(uid, unitArray){
+    body = {
+        "character_ids": [
+            `${unitArray}`
+        ],
+        "uid": `${uid}`
+    }
+    return body;
+}
 
+for (const player of playersData.players) {
+    console.log(player.name);
+    console.log(player.uid);
+    console.log(player.link);
+}
+
+
+
+
+/*
 for (const player of players) {
     (async () => {
         try {
@@ -60,3 +74,4 @@ for (const player of players) {
         }
     })();
 }
+    */
