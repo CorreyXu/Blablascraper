@@ -23,7 +23,7 @@ async function getPlayerEquipContents(playerlink, unitid, body) {
                 language: "en",
                 env: "prod",
                 data_statistics_scene: "outer",
-                data_statistics_page_id: `https://www.blablalink.com/shiftyspad/nikke/${unitid}?uid=${playerlink}`,
+                data_statistics_page_id: `https://www.blablalink.com/shiftyspad/nikke/${unitid}?uid=${playerlink}&openid=${playerlink}`,
                 data_statistics_client_type: "pc_web",
                 data_statistics_lang: "en",
             }),
@@ -41,7 +41,8 @@ async function getPlayerEquipContents(playerlink, unitid, body) {
         "credentials" : "include",
         "referer": "https://www.blablalink.com/",
         "body": JSON.stringify(body),
-        "mode": "cors"
+        "mode": "cors",
+        "TE": "trailers"
     });
 
     const data = await response.json();
@@ -50,9 +51,7 @@ async function getPlayerEquipContents(playerlink, unitid, body) {
 
 function getBody(uid, unitArray){
     const body = {
-        "character_ids": [
-            `${unitArray}`
-        ],
+        "character_ids": unitArray,
         "uid": `${uid}`
     }
     console.log(body);
@@ -66,7 +65,8 @@ console.log(unitData.units[0].name)
 const unit = unitData.units[0]
 console.log(unit)
 const unitid = unitData.units[0]?.name || "defaultUnitName"; // Use optional chaining and fallback
-const unitArray = unit.ids || "defaultUnitArray"; // Use optional chaining and fallback
+
+const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // Ensure unitArray is an array
 
 (async () => {
     try {
