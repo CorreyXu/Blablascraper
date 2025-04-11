@@ -74,27 +74,32 @@ const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // 
         result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
         console.log(`Response for player`, JSON.stringify(result, null, 4));
         
-        let totalElementalDmg = 0;
-        let totalAtk = 0;
+
 
         
-        result.data.player_equip_contents.forEach(character => {
-            character.equip_contents.forEach(equip => {
-                equip.equip_effects.forEach(effect => {
-                    effect.function_details.forEach(detail => {
-                        if (detail.function_type === "IncElementDmg") {
-                            totalElementalDmg += detail.function_value;
-                        }
-                    });
-                });
-            });
-        });
-        console.log("Total IncElementalDmg value:", totalElementalDmg);
+        const characterMap = {};
 
-        result.data.player_equip_contents.forEach(character => {
-            character.equip_contents.forEach(equip => {
+        result.data.player_equip_contents.forEach(entry => {
+            const { character_id, equip_contents } = entry;
+            // Filter only valid equips (non -99) and limit to 4
+            const validEquips = equip_contents
+                .filter(equip => equip.equip_id !== -99)
+                .slice(0, 4);
+        
+            characterMap[character_id] = validEquips;
+        });
+        
+        // Now sum IncElementDmg values from valid equips only
+        let totalElementDmg = 0;
+        let totalAtk = 0;
+        
+        Object.values(characterMap).forEach(equips => {
+            equips.forEach(equip => {
                 equip.equip_effects.forEach(effect => {
-                    effect.function_details.forEach(detail => {
+                    effect.function_details?.forEach(detail => {
+                        if (detail.function_type === "IncElementDmg") {
+                            totalElementDmg += detail.function_value;
+                        }
                         if (detail.function_type === "StatAtk") {
                             totalAtk += detail.function_value;
                         }
@@ -102,8 +107,9 @@ const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // 
                 });
             });
         });
-        console.log("Total Atk value:", totalAtk);
-
+        
+        console.log("total IncElementDmg:", totalElementDmg);
+        console.log("total Atk:", totalAtk);
 
 
     } catch (error) {
