@@ -58,9 +58,9 @@ function getBody(uid, unitArray){
     return body;
 }
 console.log (finalCookieString)
-console.log(playersData.players[0].name)
-const playerlink = playersData.players[0].link
-const playeruid = playersData.players[0].uid
+console.log(playersData.players[2].name)
+const playerlink = playersData.players[2].link
+const playeruid = playersData.players[2].uid
 console.log(unitData.units[0].name)
 const unit = unitData.units[0]
 console.log(unit)
@@ -69,11 +69,45 @@ const unitid = unitData.units[0]?.name || "defaultUnitName"; // Use optional cha
 const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // Ensure unitArray is an array
 
 (async () => {
+    let result
     try {
-        const result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
+        result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
         console.log(`Response for player`, JSON.stringify(result, null, 4));
+        
+        let totalElementalDmg = 0;
+        let totalAtk = 0;
+
+        
+        result.data.player_equip_contents.forEach(character => {
+            character.equip_contents.forEach(equip => {
+                equip.equip_effects.forEach(effect => {
+                    effect.function_details.forEach(detail => {
+                        if (detail.function_type === "IncElementDmg") {
+                            totalElementalDmg += detail.function_value;
+                        }
+                    });
+                });
+            });
+        });
+        console.log("Total IncElementalDmg value:", totalElementalDmg);
+
+        result.data.player_equip_contents.forEach(character => {
+            character.equip_contents.forEach(equip => {
+                equip.equip_effects.forEach(effect => {
+                    effect.function_details.forEach(detail => {
+                        if (detail.function_type === "StatAtk") {
+                            totalAtk += detail.function_value;
+                        }
+                    });
+                });
+            });
+        });
+        console.log("Total Atk value:", totalAtk);
+
+
+
     } catch (error) {
-        console.error(`Error for player:`, error);
+        //console.error(`Error for player:`, error);
     }
 })();
 

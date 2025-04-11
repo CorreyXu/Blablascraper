@@ -29,6 +29,685 @@
                         "equip_modify_effect": ""
                     }
                 ]
+            },
+            {
+                "character_id": 235202,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235203,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235204,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235205,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235206,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235207,
+                "equip_contents": [
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100700",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 207,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCritical",
+                                        "function_value": 298,
+                                        "function_value_type": "Integer",
+                                        "id": 700110301,
+                                        "level": 3,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100800",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 207,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCriticalDamage",
+                                        "function_value": 860,
+                                        "function_value_type": "Integer",
+                                        "id": 700120301,
+                                        "level": 3,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100300",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 207,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAmmoLoad",
+                                        "function_value": 3606,
+                                        "function_value_type": "Percent",
+                                        "id": 700070301,
+                                        "level": 3,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3111001,
+                        "equip_modify_effect": "100700_7001103_0;100800_7001203_0;100300_7000703_0"
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100500",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 690,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatChargeDamage",
+                                        "function_value": 1111,
+                                        "function_value_type": "Integer",
+                                        "id": 700091001,
+                                        "level": 10,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100200",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 276,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAccuracyCircle",
+                                        "function_value": -688,
+                                        "function_value_type": "Percent",
+                                        "id": 700060401,
+                                        "level": 4,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3211001,
+                        "equip_modify_effect": "100500_7000910_0;100200_7000604_0;0_0_0"
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100400",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 759,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAtk",
+                                        "function_value": 1181,
+                                        "function_value_type": "Percent",
+                                        "id": 700081101,
+                                        "level": 11,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100800",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 759,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCriticalDamage",
+                                        "function_value": 1644,
+                                        "function_value_type": "Integer",
+                                        "id": 700121101,
+                                        "level": 11,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3311001,
+                        "equip_modify_effect": "100400_7000811_0;0_0_0;100800_7001211_0"
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100300",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 759,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAmmoLoad",
+                                        "function_value": 6893,
+                                        "function_value_type": "Percent",
+                                        "id": 700071101,
+                                        "level": 11,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100700",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 759,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCritical",
+                                        "function_value": 571,
+                                        "function_value_type": "Integer",
+                                        "id": 700111101,
+                                        "level": 11,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3411001,
+                        "equip_modify_effect": "100300_7000711_0;100700_7001111_0;0_0_0"
+                    }
+                ]
+            },
+            {
+                "character_id": 235208,
+                "equip_contents": [
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100200",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 276,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAccuracyCircle",
+                                        "function_value": -688,
+                                        "function_value_type": "Percent",
+                                        "id": 700060401,
+                                        "level": 4,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100600",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 138,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatChargeTime",
+                                        "function_value": -228,
+                                        "function_value_type": "Percent",
+                                        "id": 700100201,
+                                        "level": 2,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3111001,
+                        "equip_modify_effect": "100200_7000604_0;100600_7001002_0;0_0_0"
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100600",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 621,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatChargeTime",
+                                        "function_value": -433,
+                                        "function_value_type": "Percent",
+                                        "id": 700100901,
+                                        "level": 9,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100100",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 828,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "IncElementDmg",
+                                        "function_value": 2215,
+                                        "function_value_type": "Percent",
+                                        "id": 700051001,
+                                        "level": 10,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3411001,
+                        "equip_modify_effect": "100600_7001009_0;100100_7000510_0;0_0_0"
+                    }
+                ]
+            },
+            {
+                "character_id": 235209,
+                "equip_contents": [
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100200",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 345,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAccuracyCircle",
+                                        "function_value": -759,
+                                        "function_value_type": "Percent",
+                                        "id": 700060501,
+                                        "level": 5,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100400",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 138,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAtk",
+                                        "function_value": 547,
+                                        "function_value_type": "Percent",
+                                        "id": 700080201,
+                                        "level": 2,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100600",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 1035,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatChargeTime",
+                                        "function_value": -609,
+                                        "function_value_type": "Percent",
+                                        "id": 700101501,
+                                        "level": 15,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3111001,
+                        "equip_modify_effect": "100200_7000605_0;100400_7000802_0;100600_7001015_0"
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100100",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 1076,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "IncElementDmg",
+                                        "function_value": 2636,
+                                        "function_value_type": "Percent",
+                                        "id": 700051301,
+                                        "level": 13,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100700",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 207,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCritical",
+                                        "function_value": 298,
+                                        "function_value_type": "Integer",
+                                        "id": 700110301,
+                                        "level": 3,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100200",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 897,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatAccuracyCircle",
+                                        "function_value": -1322,
+                                        "function_value_type": "Percent",
+                                        "id": 700061301,
+                                        "level": 13,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3211001,
+                        "equip_modify_effect": "100100_7000513_0;100700_7001103_0;100200_7000613_0"
+                    },
+                    {
+                        "equip_effects": [
+                            {
+                                "equipment_option_id": "100700",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 414,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "StatCritical",
+                                        "function_value": 400,
+                                        "function_value_type": "Integer",
+                                        "id": 700110601,
+                                        "level": 6,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "equipment_option_id": "100100",
+                                "function_details": [
+                                    {
+                                        "buff": "BuffEtc",
+                                        "buff_icon": "",
+                                        "duration_type": "Battles",
+                                        "duration_value": 0,
+                                        "function_battlepower": 1159,
+                                        "function_standard": "User",
+                                        "function_target": "Self",
+                                        "function_type": "IncElementDmg",
+                                        "function_value": 2776,
+                                        "function_value_type": "Percent",
+                                        "id": 700051401,
+                                        "level": 14,
+                                        "name_localvalues": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "equip_id": 3311001,
+                        "equip_modify_effect": "100700_7001106_0;100100_7000514_0;0_0_0"
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235210,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            },
+            {
+                "character_id": 235211,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
             }
         ],
         "result": 0
