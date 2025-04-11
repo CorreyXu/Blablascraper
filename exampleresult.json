@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "code_type": 0,
+    "msg": "ok",
+    "data": {
+        "errmsg": "success",
+        "player_equip_contents": [
+            {
+                "character_id": 235201,
+                "equip_contents": [
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    },
+                    {
+                        "equip_effects": [],
+                        "equip_id": -99,
+                        "equip_modify_effect": ""
+                    }
+                ]
+            }
+        ],
+        "result": 0
+    }
+}

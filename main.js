@@ -58,9 +58,9 @@ function getBody(uid, unitArray){
     return body;
 }
 console.log (finalCookieString)
-console.log(playersData.players[1].name)
-const playerlink = playersData.players[1].link
-const playeruid = playersData.players[1].uid
+console.log(playersData.players[0].name)
+const playerlink = playersData.players[0].link
+const playeruid = playersData.players[0].uid
 console.log(unitData.units[0].name)
 const unit = unitData.units[0]
 console.log(unit)
