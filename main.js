@@ -58,11 +58,11 @@ function getBody(uid, unitArray){
     return body;
 }
 console.log (finalCookieString)
-console.log(playersData.players[2].name)
-const playerlink = playersData.players[2].link
-const playeruid = playersData.players[2].uid
-console.log(unitData.units[0].name)
-const unit = unitData.units[0]
+console.log(playersData.players[1].name)
+const playerlink = playersData.players[1].link
+const playeruid = playersData.players[1].uid
+console.log(unitData.units[2].name)
+const unit = unitData.units[2]
 console.log(unit)
 const unitid = unitData.units[0]?.name || "defaultUnitName"; // Use optional chaining and fallback
 
@@ -72,7 +72,7 @@ const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // 
     let result
     try {
         result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
-        console.log(`Response for player`, JSON.stringify(result, null, 4));
+        console.log(`Response for player ${playersData.players[1].name} unit: ${unit.name}` );
         
 
 
@@ -88,25 +88,39 @@ const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // 
         
             characterMap[character_id] = validEquips;
         });
+        for(const key in characterMap){
+            //console.log(key)
+            //console.log(characterMap[key]);
+            if(Array.isArray(characterMap[key]) && characterMap[key].length == 0){
+                delete characterMap[key];
+            }
+        }
+        
+        const flatten = Object.values(characterMap).flat();
+        const lastfour = flatten.slice(-4);
+
+        //console.log("helppp", JSON.stringify(lastfour,null,4));
+        
         
         // Now sum IncElementDmg values from valid equips only
         let totalElementDmg = 0;
         let totalAtk = 0;
         
-        Object.values(characterMap).forEach(equips => {
-            equips.forEach(equip => {
-                equip.equip_effects.forEach(effect => {
-                    effect.function_details?.forEach(detail => {
-                        if (detail.function_type === "IncElementDmg") {
-                            totalElementDmg += detail.function_value;
-                        }
-                        if (detail.function_type === "StatAtk") {
-                            totalAtk += detail.function_value;
-                        }
-                    });
-                });
-            });
-        });
+        for (const equip in lastfour) { 
+            //console.log ("equip", JSON.stringify(lastfour[equip].equip_effects,null,4));
+            for (const effect in lastfour[equip].equip_effects) {
+                //console.log("equip", JSON.stringify(lastfour[equip].equip_effects[effect].function_details,null,4));
+                for (const func in lastfour[equip].equip_effects[effect].function_details) {
+                    //console.log("equip", JSON.stringify(lastfour[equip].equip_effects[effect].function_details[func].function_type,null,4));
+                    if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "IncElementDmg") {
+                        totalElementDmg += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                    }
+                    if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAtk") {
+                        totalAtk += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                    }
+                }
+            }
+        }
         
         console.log("total IncElementDmg:", totalElementDmg);
         console.log("total Atk:", totalAtk);
@@ -130,4 +144,3 @@ for (const unit of unitData.units){
     console.log(unit.ids)
 }
 */
-
