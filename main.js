@@ -2,6 +2,10 @@ import fetch from "node-fetch";
 import fs from "fs";
 
 
+const output = fs.createWriteStream('output.csv');
+output.write('player,unit,ele,atk,ammo,cs\n');
+
+
 const finalCookieString = fs.readFileSync("cookie.config", "utf-8");
 const playersData = JSON.parse(fs.readFileSync("players.config", "utf-8"));
 const unitData = JSON.parse(fs.readFileSync("units.config", "utf-8"));
@@ -54,89 +58,109 @@ function getBody(uid, unitArray){
         "character_ids": unitArray,
         "uid": `${uid}`
     }
-    console.log(body);
+    //console.log(body);
     return body;
 }
-console.log (finalCookieString)
-console.log(playersData.players[1].name)
-const playerlink = playersData.players[1].link
-const playeruid = playersData.players[1].uid
-console.log(unitData.units[6].name)
-const unit = unitData.units[6]
-console.log(unit)
-const unitid = unitData.units[0]?.name || "defaultUnitName"; 
 
-const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; 
+
 
 (async () => {
     let result
     try {
-        result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
-        console.log(`Response for player ${playersData.players[1].name} unit: ${unit.name}` );
-        
+        for (const player of playersData.players) {
+            for (const unit of unitData.units){
+                const playerlink = player.link
+                const playeruid = player.uid
+                const unitid = unit?.name || "defaultUnitName"; 
+                const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; 
+
+                result = await getPlayerEquipContents(playerlink, unitid, getBody(playeruid, unitArray));
+                console.log(`Response for player ${player.name} unit: ${unit.name}` );
+                
 
 
-        
-        const characterMap = {};
+                
+                const characterMap = {};
 
-        result.data.player_equip_contents.forEach(entry => {
-            const { character_id, equip_contents } = entry;
-            // Filter only valid equips (non -99) and limit to 4
-            const validEquips = equip_contents
-                .filter(equip => equip.equip_id !== -99)
-                .slice(0, 4);
-        
-            characterMap[character_id] = validEquips;
-        });
-        for(const key in characterMap){
-            //console.log(key)
-            //console.log(characterMap[key]);
-            if(Array.isArray(characterMap[key]) && characterMap[key].length == 0){
-                delete characterMap[key];
-            }
-        }
-        
-        const flatten = Object.values(characterMap).flat();
-        //console.log("helppp", JSON.stringify(flatten,null,4));
-        const lastfour = []
-        for(const equip_id in flatten){
-            const index = String(flatten[equip_id].equip_id)[1];
-            lastfour[index] = flatten[equip_id];
-        }
-
-  
-
-        
-        
-        
-        // Now sum IncElementDmg values from valid equips only
-        let totalElementDmg = 0;
-        let totalAtk = 0;
-        
-        for (const equip in lastfour) { 
-            //console.log ("equip", JSON.stringify(lastfour[equip].equip_effects,null,4));
-            for (const effect in lastfour[equip].equip_effects) {
-                //console.log("equip", JSON.stringify(lastfour[equip].equip_effects[effect].function_details,null,4));
-                for (const func in lastfour[equip].equip_effects[effect].function_details) {
-                    //console.log("equip", JSON.stringify(lastfour[equip].equip_effects[effect].function_details[func].function_type,null,4));
-                    if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "IncElementDmg") {
-                        totalElementDmg += lastfour[equip].equip_effects[effect].function_details[func].function_value;
-                    }
-                    if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAtk") {
-                        totalAtk += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                result.data.player_equip_contents.forEach(entry => {
+                    const { character_id, equip_contents } = entry;
+                    // Filter only valid equips (non -99) and limit to 4
+                    const validEquips = equip_contents
+                        .filter(equip => equip.equip_id !== -99)
+                        .slice(0, 4);
+                
+                    characterMap[character_id] = validEquips;
+                });
+                for(const key in characterMap){
+                    //console.log(key)
+                    //console.log(characterMap[key]);
+                    if(Array.isArray(characterMap[key]) && characterMap[key].length == 0){
+                        delete characterMap[key];
                     }
                 }
+                
+                const flatten = Object.values(characterMap).flat();
+                //console.log("helppp", JSON.stringify(flatten,null,4));
+                const lastfour = []
+                for(const equip_id in flatten){
+                    const index = String(flatten[equip_id].equip_id)[1];
+                    lastfour[index] = flatten[equip_id];
+                }
+
+        
+
+                
+                
+                
+                // Now sum IncElementDmg values from valid equips only
+                let totalElementDmg = 0;
+                let totalAtk = 0;
+                let maxAmmo = 0;
+                let chargeSpd = 0;
+                
+                for (const equip in lastfour) { 
+                    for (const effect in lastfour[equip].equip_effects) {
+                        for (const func in lastfour[equip].equip_effects[effect].function_details) {
+                            if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "IncElementDmg") {
+                                totalElementDmg += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            }
+                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAtk") {
+                                totalAtk += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            }
+                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAmmoLoad") {
+                                maxAmmo += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            }
+                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatChargeTime") {
+                                chargeSpd += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            }
+                            
+                        }
+                    }
+                }
+                
+                console.log("total IncElementDmg:", totalElementDmg);
+                console.log("total Atk:", totalAtk);
+                console.log("total Ammo Load:", maxAmmo);
+                console.log("total Charge Spd:", chargeSpd);
+                console.log(`${player.name},${unit.name},${totalElementDmg},${totalAtk},${maxAmmo},${chargeSpd}\n`);
+                output.write(`${player.name},${unit.name},${totalElementDmg},${totalAtk},${maxAmmo},${chargeSpd}\n`);
             }
         }
-        
-        console.log("total IncElementDmg:", totalElementDmg);
-        console.log("total Atk:", totalAtk);
 
+
+
+        output.end(() => {
+            console.log('closed CSV')
+        })
+        
 
     } catch (error) {
         //console.error(`Error for player:`, error);
     }
 })();
+
+
+
 
 /*
 for (const player of playersData.players) {
