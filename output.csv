@@ -1,82 +1,82 @@
-player,unit,ele,atk,ammo,cs
-cup,helm,4290,4161,0,-1241
-cup,lud,2356,2010,15019,0
-cup,qeq,0,2347,6893,-837
-cup,bready,0,0,6893,-492
-cup,viper,0,0,0,0
-cup,xguill,0,0,0,0
-cup,fasuka,0,0,0,0
-cup,frei,8861,2081,13786,0
-cup,modernia,0,1322,19446,-749
-cup,alice,4265,1940,17392,-837
-cup,rrh,8861,2081,13786,0
-cup,drake,0,0,0,0
-cup,sbs,8861,2081,13786,0
-cup,wasuka,7346,1995,12964,0
-cup,wrei,0,0,0,0
-cup,mana,0,0,0,0
-cup,ssakura,0,0,0,0
-cup,redhood,7488,0,11732,-955
-cup,laplace,0,0,0,0
-cup,maxwell,0,0,0,0
-cup,bsoda,0,0,0,0
-cup,snowwhite,0,0,0,0
-cup,cindy,1935,1181,6893,-492
-cup,sanis,0,0,0,0
-cup,ein,0,0,0,0
-cup,exia,0,0,0,0
-cup,xmaiden,0,0,0,0
-mooey,helm,8441,2011,8856,-609
-mooey,lud,8721,1377,13375,0
-mooey,qeq,9422,2557,0,0
-mooey,bready,6646,1517,5660,-631
-mooey,viper,0,0,13786,0
-mooey,xguill,0,2769,6893,0
-mooey,fasuka,6085,2628,4839,0
-mooey,frei,8721,2856,17393,0
-mooey,modernia,7461,1252,17803,0
-mooey,alice,4571,3051,13786,-808
-mooey,rrh,8721,2856,17393,0
-mooey,drake,0,0,0,0
-mooey,sbs,8721,2856,17393,0
-mooey,wasuka,5245,1447,0,0
-mooey,wrei,2496,0,6893,-492
-mooey,mana,0,0,0,0
-mooey,ssakura,0,1994,8126,-316
-mooey,redhood,8581,4302,8034,0
-mooey,laplace,0,1181,0,0
-mooey,maxwell,1655,2136,6893,-492
-mooey,bsoda,6226,0,6893,0
-mooey,snowwhite,0,0,0,0
-mooey,cindy,9984,3739,4428,-404
-mooey,sanis,9702,4248,0,-316
-mooey,ein,8861,2011,5250,-316
-mooey,exia,5666,688,0,0
-mooey,xmaiden,9001,0,0,-808
-ashan,helm,7627,547,0,-1042
-ashan,lud,8440,2010,14197,0
-ashan,qeq,7180,2417,0,0
-ashan,bready,2048,0,12553,0
-ashan,viper,0,0,0,0
-ashan,xguill,0,0,0,0
-ashan,fasuka,8302,1940,7212,0
-ashan,frei,7181,0,12461,-492
-ashan,modernia,2356,618,16981,-492
-ashan,alice,6646,2503,6893,-925
-ashan,rrh,7181,0,12461,-492
-ashan,drake,5245,1728,14927,-198
-ashan,sbs,7181,0,12461,-492
-ashan,wasuka,6086,829,5660,0
-ashan,wrei,1908,477,6893,-404
-ashan,mana,0,0,0,0
-ashan,ssakura,5525,2471,11732,-1241
-ashan,redhood,2356,2081,17803,-492
-ashan,laplace,5105,1854,4017,0
-ashan,maxwell,2356,1181,6893,0
-ashan,bsoda,0,1181,0,-984
-ashan,snowwhite,2356,0,9677,-286
-ashan,cindy,8161,3739,7304,0
-ashan,sanis,7599,3951,0,-404
-ashan,ein,4431,1799,6801,-375
-ashan,exia,7461,759,0,0
-ashan,xmaiden,2356,0,16570,0
+player,unit,totalele,totalatk,totalammo,totalcs,totalhitrate,gear1line1,gear1line2,gear1line3,gear2line1,gear2line2,gear2line3,gear3line1,gear3line2,gear3line3,gear4line1,gear4line2,gear4line3,
+cup,helm,42.90,41.61,0.00,12.41,0.00,IncElementDmg: 22.15,StatAtk: 11.81,blank,StatCritical: 4.00,StatAtk: 10.40,StatChargeTime: 2.86,StatChargeDamage: 7.59,StatAtk: 6.88,StatChargeTime: 4.92,StatChargeTime: 4.63,IncElementDmg: 20.75,StatAtk: 12.52
+cup,lud,23.56,20.10,150.19,0.00,11.81,StatAtk: 11.81,StatAccuracyCircle: 11.81,blank,IncElementDmg: 23.56,StatDef: 11.81,blank,StatAmmoLoad: 81.26,StatAtk: 8.29,blank,StatAmmoLoad: 68.93,StatCriticalDamage: 16.44,blank
+cup,qeq,0.00,23.47,68.93,8.37,6.88,StatChargeTime: 5.51,StatAtk: 7.59,blank,StatAmmoLoad: 68.93,blank,blank,StatAtk: 7.59,StatChargeTime: 2.86,StatAccuracyCircle: 6.88,StatAtk: 8.29,StatDef: 7.59,StatCriticalDamage: 9.58
+cup,bready,0.00,0.00,68.93,4.92,0.00,StatCritical: 5.71,StatAmmoLoad: 68.93,blank,StatChargeTime: 4.92,blank,blank,StatChargeDamage: 11.81,blank,blank,blank,blank,blank
+cup,viper,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,xguill,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,fasuka,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,frei,88.61,20.81,137.86,0.00,10.40,IncElementDmg: 22.15,StatAtk: 6.18,blank,IncElementDmg: 22.15,StatAmmoLoad: 73.04,blank,StatAmmoLoad: 64.82,StatAccuracyCircle: 10.40,IncElementDmg: 26.36,StatAtk: 14.63,StatCriticalDamage: 10.56,IncElementDmg: 17.95
+cup,modernia,0.00,13.22,194.46,7.49,13.76,StatAtk: 13.22,StatChargeTime: 2.57,StatAccuracyCircle: 5.47,StatAmmoLoad: 60.71,StatAccuracyCircle: 8.29,blank,StatChargeTime: 4.92,StatChargeDamage: 11.81,StatAmmoLoad: 68.93,StatCritical: 5.03,StatChargeDamage: 11.11,StatAmmoLoad: 64.82
+cup,alice,42.65,19.40,173.92,8.37,13.93,IncElementDmg: 13.75,StatAmmoLoad: 60.71,blank,StatAmmoLoad: 48.39,StatChargeTime: 4.33,IncElementDmg: 15.15,StatAtk: 13.22,StatAmmoLoad: 64.82,IncElementDmg: 13.75,StatAtk: 6.18,StatChargeTime: 4.04,StatAccuracyCircle: 13.93
+cup,rrh,88.61,20.81,137.86,0.00,10.40,IncElementDmg: 22.15,StatAtk: 6.18,blank,IncElementDmg: 22.15,StatAmmoLoad: 73.04,blank,StatAmmoLoad: 64.82,StatAccuracyCircle: 10.40,IncElementDmg: 26.36,StatAtk: 14.63,StatCriticalDamage: 10.56,IncElementDmg: 17.95
+cup,drake,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,sbs,88.61,20.81,137.86,0.00,10.40,IncElementDmg: 22.15,StatAtk: 6.18,blank,IncElementDmg: 22.15,StatAmmoLoad: 73.04,blank,StatAmmoLoad: 64.82,StatAccuracyCircle: 10.40,IncElementDmg: 26.36,StatAtk: 14.63,StatCriticalDamage: 10.56,IncElementDmg: 17.95
+cup,wasuka,73.46,19.95,129.64,0.00,8.29,IncElementDmg: 22.15,StatAtk: 6.18,blank,StatAtk: 9.00,IncElementDmg: 29.16,blank,IncElementDmg: 22.15,StatDef: 4.77,StatAmmoLoad: 60.71,StatAtk: 4.77,StatAccuracyCircle: 8.29,StatAmmoLoad: 68.93
+cup,wrei,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,mana,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,ssakura,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,redhood,74.88,0.00,117.32,9.55,0.00,IncElementDmg: 27.76,StatCritical: 2.64,StatChargeTime: 4.63,IncElementDmg: 23.56,StatAmmoLoad: 68.93,StatDef: 11.81,StatChargeTime: 4.92,StatAmmoLoad: 48.39,blank,StatDef: 11.81,IncElementDmg: 23.56,blank
+cup,laplace,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,maxwell,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,bsoda,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,snowwhite,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,cindy,19.35,11.81,68.93,4.92,0.00,StatChargeDamage: 9.00,IncElementDmg: 19.35,blank,StatChargeTime: 4.92,StatChargeDamage: 11.81,blank,StatAtk: 11.81,blank,blank,StatCritical: 5.71,StatAmmoLoad: 68.93,blank
+cup,sanis,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,ein,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,exia,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+cup,xmaiden,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+mooey,helm,84.41,20.11,88.56,6.09,0.00,StatDef: 4.77,IncElementDmg: 15.15,StatAtk: 12.52,StatChargeTime: 6.09,StatAmmoLoad: 40.17,IncElementDmg: 24.96,StatAtk: 7.59,IncElementDmg: 22.15,blank,IncElementDmg: 22.15,StatAmmoLoad: 48.39,blank
+mooey,lud,87.21,13.77,133.75,0.00,8.29,StatAtk: 4.77,IncElementDmg: 20.75,blank,IncElementDmg: 20.75,StatAccuracyCircle: 8.29,blank,IncElementDmg: 22.15,StatAmmoLoad: 64.82,StatAtk: 9.00,StatAmmoLoad: 68.93,IncElementDmg: 23.56,StatChargeDamage: 11.81
+mooey,qeq,94.22,25.57,0.00,0.00,19.40,IncElementDmg: 20.75,StatAtk: 8.29,StatAccuracyCircle: 10.40,StatAtk: 5.47,StatCriticalDamage: 6.64,IncElementDmg: 29.16,IncElementDmg: 23.56,StatAtk: 11.81,StatCriticalDamage: 16.44,StatAccuracyCircle: 9.00,IncElementDmg: 20.75,blank
+mooey,bready,66.46,15.17,56.60,6.31,0.00,StatChargeTime: 4.33,StatDef: 10.40,StatAtk: 5.47,StatAmmoLoad: 56.60,IncElementDmg: 20.75,StatDef: 4.77,StatAtk: 9.70,IncElementDmg: 24.96,StatChargeDamage: 6.18,StatDef: 9.70,StatChargeTime: 1.98,IncElementDmg: 20.75
+mooey,viper,0.00,0.00,137.86,0.00,0.00,StatDef: 11.81,StatCriticalDamage: 16.44,blank,StatAmmoLoad: 68.93,blank,blank,StatAmmoLoad: 68.93,StatDef: 11.81,blank,blank,blank,blank
+mooey,xguill,0.00,27.69,68.93,0.00,11.81,StatAccuracyCircle: 11.81,StatCritical: 5.71,StatAmmoLoad: 68.93,StatAtk: 10.40,blank,blank,StatAtk: 6.18,StatChargeDamage: 9.00,blank,StatAtk: 11.11,blank,blank
+mooey,fasuka,60.85,26.28,48.39,0.00,0.00,StatDef: 6.18,IncElementDmg: 19.35,StatCriticalDamage: 10.56,StatCriticalDamage: 13.50,StatAtk: 9.70,StatAmmoLoad: 48.39,StatCritical: 3.32,StatAtk: 6.88,IncElementDmg: 20.75,IncElementDmg: 20.75,StatAtk: 9.70,blank
+mooey,frei,87.21,28.56,173.93,0.00,0.00,IncElementDmg: 24.96,StatAmmoLoad: 44.28,blank,IncElementDmg: 19.35,StatAtk: 14.63,StatChargeDamage: 6.18,StatAmmoLoad: 44.28,StatCritical: 5.03,IncElementDmg: 22.15,StatAtk: 13.93,IncElementDmg: 20.75,StatAmmoLoad: 85.37
+mooey,modernia,74.61,12.52,178.03,0.00,11.81,IncElementDmg: 15.15,StatAmmoLoad: 60.71,blank,StatAccuracyCircle: 11.81,IncElementDmg: 23.56,StatChargeDamage: 11.81,IncElementDmg: 15.15,StatAmmoLoad: 48.39,StatAtk: 12.52,StatAmmoLoad: 68.93,IncElementDmg: 20.75,blank
+mooey,alice,45.71,30.51,137.86,8.08,0.00,StatChargeTime: 2.57,StatCriticalDamage: 16.44,StatAtk: 13.22,StatAtk: 9.70,StatCriticalDamage: 6.64,StatChargeTime: 5.51,StatAtk: 7.59,IncElementDmg: 22.15,StatAmmoLoad: 68.93,IncElementDmg: 23.56,StatAmmoLoad: 68.93,blank
+mooey,rrh,87.21,28.56,173.93,0.00,0.00,IncElementDmg: 24.96,StatAmmoLoad: 44.28,blank,IncElementDmg: 19.35,StatAtk: 14.63,StatChargeDamage: 6.18,StatAmmoLoad: 44.28,StatCritical: 5.03,IncElementDmg: 22.15,StatAtk: 13.93,IncElementDmg: 20.75,StatAmmoLoad: 85.37
+mooey,drake,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+mooey,sbs,87.21,28.56,173.93,0.00,0.00,IncElementDmg: 24.96,StatAmmoLoad: 44.28,blank,IncElementDmg: 19.35,StatAtk: 14.63,StatChargeDamage: 6.18,StatAmmoLoad: 44.28,StatCritical: 5.03,IncElementDmg: 22.15,StatAtk: 13.93,IncElementDmg: 20.75,StatAmmoLoad: 85.37
+mooey,wasuka,52.45,14.47,0.00,0.00,6.18,IncElementDmg: 16.55,blank,blank,StatAtk: 9.00,StatAccuracyCircle: 6.18,blank,IncElementDmg: 20.75,StatAtk: 5.47,blank,IncElementDmg: 15.15,blank,blank
+mooey,wrei,24.96,0.00,68.93,4.92,11.81,StatChargeDamage: 11.81,StatCritical: 5.71,StatAccuracyCircle: 11.81,StatDef: 11.81,StatChargeTime: 4.92,blank,StatCritical: 3.32,IncElementDmg: 24.96,StatChargeDamage: 10.40,StatAmmoLoad: 68.93,blank,blank
+mooey,mana,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+mooey,ssakura,0.00,19.94,81.26,3.16,9.00,StatAmmoLoad: 81.26,StatCritical: 6.05,blank,StatAtk: 6.88,StatChargeDamage: 8.29,blank,StatAtk: 5.47,StatAccuracyCircle: 9.00,blank,StatAtk: 7.59,StatChargeTime: 3.16,blank
+mooey,redhood,85.81,43.02,80.34,0.00,0.00,StatAtk: 11.11,IncElementDmg: 23.56,StatAmmoLoad: 40.17,StatAtk: 11.11,IncElementDmg: 22.15,blank,StatChargeDamage: 9.70,IncElementDmg: 17.95,StatAtk: 10.40,StatAmmoLoad: 40.17,StatAtk: 10.40,IncElementDmg: 22.15
+mooey,laplace,0.00,11.81,0.00,0.00,0.00,StatCritical: 5.71,StatAtk: 11.81,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+mooey,maxwell,16.55,21.36,68.93,4.92,0.00,StatAtk: 6.18,blank,blank,StatAtk: 6.18,blank,blank,StatAmmoLoad: 68.93,StatChargeTime: 4.92,blank,StatAtk: 9.00,IncElementDmg: 16.55,blank
+mooey,bsoda,62.26,0.00,68.93,0.00,0.00,IncElementDmg: 24.96,blank,blank,StatCritical: 5.71,StatAmmoLoad: 68.93,blank,IncElementDmg: 15.15,StatChargeDamage: 9.70,StatCriticalDamage: 14.48,IncElementDmg: 22.15,StatCriticalDamage: 11.54,blank
+mooey,snowwhite,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+mooey,cindy,99.84,37.39,44.28,4.04,0.00,IncElementDmg: 26.36,StatAtk: 9.70,StatChargeTime: 4.04,StatAtk: 9.70,IncElementDmg: 23.56,blank,StatAtk: 7.59,IncElementDmg: 26.36,StatCriticalDamage: 7.62,StatAtk: 10.40,IncElementDmg: 23.56,StatAmmoLoad: 44.28
+mooey,sanis,97.02,42.48,0.00,3.16,6.88,IncElementDmg: 29.16,StatAccuracyCircle: 6.88,blank,IncElementDmg: 24.96,StatAtk: 13.22,blank,StatAtk: 14.63,IncElementDmg: 22.15,StatChargeTime: 3.16,IncElementDmg: 20.75,StatAtk: 14.63,blank
+mooey,ein,88.61,20.11,52.50,3.16,7.59,IncElementDmg: 22.15,StatChargeTime: 3.16,blank,StatAtk: 13.93,StatAmmoLoad: 52.50,IncElementDmg: 22.15,StatAccuracyCircle: 7.59,IncElementDmg: 23.56,StatAtk: 6.18,IncElementDmg: 20.75,StatCritical: 7.07,blank
+mooey,exia,56.66,6.88,0.00,0.00,0.00,IncElementDmg: 16.55,StatCriticalDamage: 9.58,blank,IncElementDmg: 16.55,StatCriticalDamage: 10.56,blank,StatAtk: 6.88,blank,blank,StatCriticalDamage: 16.44,IncElementDmg: 23.56,StatChargeDamage: 11.81
+mooey,xmaiden,90.01,0.00,0.00,8.08,6.18,StatAccuracyCircle: 6.18,IncElementDmg: 22.15,StatChargeTime: 3.75,StatCritical: 2.30,StatChargeDamage: 6.18,IncElementDmg: 22.15,StatDef: 6.88,StatCriticalDamage: 6.64,IncElementDmg: 26.36,StatChargeDamage: 8.29,IncElementDmg: 19.35,StatChargeTime: 4.33
+ashan,helm,76.27,5.47,0.00,10.42,20.81,StatAccuracyCircle: 7.59,StatAtk: 5.47,StatChargeTime: 6.09,IncElementDmg: 26.36,StatCritical: 2.98,StatAccuracyCircle: 13.22,StatCritical: 4.00,IncElementDmg: 27.76,blank,StatChargeTime: 4.33,IncElementDmg: 22.15,blank
+ashan,lud,84.40,20.10,141.97,0.00,0.00,StatChargeDamage: 6.18,StatCritical: 2.64,IncElementDmg: 20.75,IncElementDmg: 20.75,StatAtk: 5.47,blank,StatAtk: 14.63,IncElementDmg: 22.15,StatAmmoLoad: 64.82,StatAmmoLoad: 77.15,StatChargeDamage: 13.22,IncElementDmg: 20.75
+ashan,qeq,71.80,24.17,0.00,0.00,9.00,StatAtk: 4.77,StatChargeDamage: 5.47,IncElementDmg: 17.95,IncElementDmg: 19.35,StatAtk: 7.59,blank,StatAccuracyCircle: 9.00,IncElementDmg: 15.15,blank,StatAtk: 11.81,IncElementDmg: 19.35,blank
+ashan,bready,20.48,0.00,125.53,0.00,11.81,IncElementDmg: 10.94,StatCritical: 2.64,blank,StatAmmoLoad: 56.60,IncElementDmg: 9.54,blank,StatCritical: 5.71,StatAmmoLoad: 68.93,StatAccuracyCircle: 11.81,StatCritical: 5.71,blank,blank
+ashan,viper,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+ashan,xguill,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+ashan,fasuka,83.02,19.40,72.12,0.00,17.99,StatCriticalDamage: 13.50,StatAtk: 7.59,IncElementDmg: 13.75,StatAtk: 11.81,IncElementDmg: 23.56,StatAccuracyCircle: 11.81,StatAccuracyCircle: 6.18,StatAmmoLoad: 36.06,IncElementDmg: 19.35,IncElementDmg: 26.36,StatCritical: 6.05,StatAmmoLoad: 36.06
+ashan,frei,71.81,0.00,124.61,4.92,0.00,StatChargeTime: 4.92,IncElementDmg: 23.56,blank,StatDef: 6.88,IncElementDmg: 16.55,StatAmmoLoad: 40.17,StatCritical: 4.69,StatAmmoLoad: 56.60,IncElementDmg: 17.95,StatAmmoLoad: 27.84,IncElementDmg: 13.75,blank
+ashan,modernia,23.56,6.18,169.81,4.92,22.22,StatAmmoLoad: 31.95,StatAtk: 6.18,blank,IncElementDmg: 23.56,StatAccuracyCircle: 7.59,blank,StatAccuracyCircle: 14.63,StatAmmoLoad: 68.93,StatChargeDamage: 9.00,StatAmmoLoad: 68.93,StatChargeTime: 4.92,blank
+ashan,alice,66.46,25.03,68.93,9.25,6.88,StatAtk: 11.81,StatCriticalDamage: 16.44,StatAmmoLoad: 68.93,IncElementDmg: 20.75,StatAtk: 13.22,blank,IncElementDmg: 22.15,StatChargeTime: 4.33,StatAccuracyCircle: 6.88,StatCritical: 5.71,StatChargeTime: 4.92,IncElementDmg: 23.56
+ashan,rrh,71.81,0.00,124.61,4.92,0.00,StatChargeTime: 4.92,IncElementDmg: 23.56,blank,StatDef: 6.88,IncElementDmg: 16.55,StatAmmoLoad: 40.17,StatCritical: 4.69,StatAmmoLoad: 56.60,IncElementDmg: 17.95,StatAmmoLoad: 27.84,IncElementDmg: 13.75,blank
+ashan,drake,52.45,17.28,149.27,1.98,0.00,IncElementDmg: 13.75,StatChargeTime: 1.98,StatAmmoLoad: 44.28,IncElementDmg: 17.95,StatAtk: 6.88,blank,StatAmmoLoad: 40.17,StatCritical: 4.00,IncElementDmg: 20.75,StatAtk: 10.40,StatAmmoLoad: 64.82,blank
+ashan,sbs,71.81,0.00,124.61,4.92,0.00,StatChargeTime: 4.92,IncElementDmg: 23.56,blank,StatDef: 6.88,IncElementDmg: 16.55,StatAmmoLoad: 40.17,StatCritical: 4.69,StatAmmoLoad: 56.60,IncElementDmg: 17.95,StatAmmoLoad: 27.84,IncElementDmg: 13.75,blank
+ashan,wasuka,60.86,8.29,56.60,0.00,26.44,IncElementDmg: 27.76,StatAccuracyCircle: 14.63,blank,IncElementDmg: 23.56,StatAccuracyCircle: 11.81,blank,StatAmmoLoad: 56.60,StatAtk: 8.29,blank,StatCritical: 3.66,IncElementDmg: 9.54,StatCriticalDamage: 6.64
+ashan,wrei,19.08,4.77,68.93,4.04,13.77,IncElementDmg: 9.54,StatAtk: 4.77,StatChargeTime: 4.04,StatAmmoLoad: 68.93,StatChargeDamage: 11.81,blank,StatAccuracyCircle: 9.00,StatCritical: 5.03,StatChargeDamage: 9.70,IncElementDmg: 9.54,StatAccuracyCircle: 4.77,blank
+ashan,mana,0.00,0.00,0.00,0.00,0.00,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank
+ashan,ssakura,55.25,24.71,117.32,12.41,0.00,StatChargeTime: 4.63,StatAmmoLoad: 52.50,StatAtk: 4.77,IncElementDmg: 13.75,StatAtk: 9.70,StatAmmoLoad: 64.82,StatAtk: 5.47,IncElementDmg: 19.35,StatChargeTime: 4.92,StatChargeTime: 2.86,IncElementDmg: 22.15,StatAtk: 4.77
+ashan,redhood,23.56,20.81,178.03,4.92,7.59,StatDef: 11.81,IncElementDmg: 23.56,StatAtk: 11.81,StatAmmoLoad: 68.93,StatAtk: 9.00,blank,StatChargeTime: 4.92,StatAmmoLoad: 68.93,blank,StatAccuracyCircle: 7.59,StatAmmoLoad: 40.17,StatChargeDamage: 5.47
+ashan,laplace,51.05,18.54,40.17,0.00,6.88,StatAtk: 6.18,IncElementDmg: 10.94,blank,StatCritical: 5.37,StatCriticalDamage: 8.60,IncElementDmg: 23.56,StatAtk: 4.77,IncElementDmg: 16.55,StatAccuracyCircle: 6.88,StatAtk: 7.59,StatAmmoLoad: 40.17,blank
+ashan,maxwell,23.56,11.81,68.93,0.00,23.62,StatDef: 11.81,StatAtk: 11.81,blank,IncElementDmg: 23.56,StatCriticalDamage: 16.44,blank,StatChargeDamage: 11.81,StatAccuracyCircle: 11.81,blank,StatAmmoLoad: 68.93,StatChargeDamage: 11.81,StatAccuracyCircle: 11.81
+ashan,bsoda,0.00,11.81,0.00,9.84,23.62,StatDef: 11.81,StatAtk: 11.81,StatChargeDamage: 11.81,StatChargeTime: 4.92,blank,blank,StatCritical: 5.71,StatAccuracyCircle: 11.81,blank,StatChargeTime: 4.92,StatAccuracyCircle: 11.81,blank
+ashan,snowwhite,23.56,0.00,96.77,2.86,0.00,StatAmmoLoad: 40.17,StatDef: 5.47,StatCritical: 5.03,StatChargeDamage: 7.59,StatAmmoLoad: 56.60,blank,StatChargeTime: 2.86,IncElementDmg: 23.56,blank,StatChargeDamage: 6.88,StatCriticalDamage: 15.46,StatCritical: 4.00
+ashan,cindy,81.61,37.39,73.04,0.00,0.00,IncElementDmg: 24.96,StatAtk: 9.70,StatDef: 11.11,IncElementDmg: 22.15,StatAmmoLoad: 73.04,StatAtk: 6.88,StatCritical: 3.32,IncElementDmg: 15.15,StatAtk: 9.70,StatAtk: 11.11,IncElementDmg: 19.35,StatCritical: 3.66
+ashan,sanis,75.99,39.51,0.00,4.04,6.18,StatChargeTime: 4.04,StatAtk: 9.00,IncElementDmg: 22.15,IncElementDmg: 22.15,StatAtk: 11.81,blank,IncElementDmg: 22.15,StatAccuracyCircle: 6.18,StatAtk: 11.11,StatAtk: 7.59,IncElementDmg: 9.54,blank
+ashan,ein,44.31,17.99,68.01,3.75,11.81,StatAmmoLoad: 31.95,StatAtk: 7.59,StatChargeTime: 3.75,StatAmmoLoad: 36.06,StatAtk: 10.40,StatDef: 7.59,StatAccuracyCircle: 11.81,IncElementDmg: 23.56,blank,StatCriticalDamage: 15.46,IncElementDmg: 20.75,blank
+ashan,exia,74.61,7.59,0.00,0.00,11.81,StatCriticalDamage: 16.44,IncElementDmg: 12.34,blank,IncElementDmg: 15.15,StatAtk: 7.59,blank,StatAccuracyCircle: 11.81,IncElementDmg: 23.56,blank,IncElementDmg: 23.56,blank,blank
+ashan,xmaiden,23.56,0.00,165.70,0.00,0.00,IncElementDmg: 23.56,blank,blank,StatAmmoLoad: 68.93,StatCritical: 5.71,blank,StatCritical: 2.98,StatAmmoLoad: 36.06,StatChargeDamage: 7.59,StatAmmoLoad: 60.71,StatChargeDamage: 11.11,blank

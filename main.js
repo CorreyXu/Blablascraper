@@ -3,7 +3,7 @@ import fs from "fs";
 
 
 const output = fs.createWriteStream('output.csv');
-output.write('player,unit,ele,atk,ammo,cs\n');
+output.write('player,unit,totalele,totalatk,totalammo,totalcs,totalhitrate,gear1line1,gear1line2,gear1line3,gear2line1,gear2line2,gear2line3,gear3line1,gear3line2,gear3line3,gear4line1,gear4line2,gear4line3,\n');
 
 
 const finalCookieString = fs.readFileSync("cookie.config", "utf-8");
@@ -101,49 +101,54 @@ function getBody(uid, unitArray){
                 
                 const flatten = Object.values(characterMap).flat();
                 //console.log("helppp", JSON.stringify(flatten,null,4));
-                const lastfour = []
+                const lastfour = [0,0,0,0]
                 for(const equip_id in flatten){
                     const index = String(flatten[equip_id].equip_id)[1];
-                    lastfour[index] = flatten[equip_id];
+                    lastfour[index-1] = flatten[equip_id];
                 }
-
-        
-
-                
-                
                 
                 // Now sum IncElementDmg values from valid equips only
+                let gearLines = [["blank","blank","blank"],["blank","blank","blank"],["blank","blank","blank"],["blank","blank","blank"]]
+                
+
                 let totalElementDmg = 0;
                 let totalAtk = 0;
-                let maxAmmo = 0;
-                let chargeSpd = 0;
-                
+                let totalMaxAmmo = 0;
+                let totalChargeSpd = 0;
+                let totalHitRate = 0;
+
+
                 for (const equip in lastfour) { 
+
                     for (const effect in lastfour[equip].equip_effects) {
                         for (const func in lastfour[equip].equip_effects[effect].function_details) {
                             if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "IncElementDmg") {
-                                totalElementDmg += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                                totalElementDmg += Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100);
                             }
-                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAtk") {
-                                totalAtk += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAtk") {
+                                totalAtk += Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100);
                             }
-                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAmmoLoad") {
-                                maxAmmo += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAmmoLoad") {
+                                totalMaxAmmo += Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100);
                             }
-                            else if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatChargeTime") {
-                                chargeSpd += lastfour[equip].equip_effects[effect].function_details[func].function_value;
+                            if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatChargeTime") {
+                                totalChargeSpd += Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100);
                             }
-                            
+                            if (lastfour[equip].equip_effects[effect].function_details[func].function_type == "StatAccuracyCircle") {
+                                totalHitRate += Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100);
+                            }
+                            gearLines[equip][effect] = `${lastfour[equip].equip_effects[effect].function_details[func].function_type}: ${Math.abs(lastfour[equip].equip_effects[effect].function_details[func].function_value/100).toFixed(2)}`;
+
                         }
                     }
                 }
                 
                 console.log("total IncElementDmg:", totalElementDmg);
                 console.log("total Atk:", totalAtk);
-                console.log("total Ammo Load:", maxAmmo);
-                console.log("total Charge Spd:", chargeSpd);
-                console.log(`${player.name},${unit.name},${totalElementDmg},${totalAtk},${maxAmmo},${chargeSpd}\n`);
-                output.write(`${player.name},${unit.name},${totalElementDmg},${totalAtk},${maxAmmo},${chargeSpd}\n`);
+                console.log("total Ammo Load:", totalMaxAmmo);
+                console.log("total Charge Spd:", totalChargeSpd);
+                console.log("total Hit Rate:", totalHitRate);
+                output.write(`${player.name},${unit.name},${totalElementDmg.toFixed(2)},${totalAtk.toFixed(2)},${totalMaxAmmo.toFixed(2)},${totalChargeSpd.toFixed(2)},${totalHitRate.toFixed(2)},${gearLines[0][0]},${gearLines[0][1]},${gearLines[0][2]},${gearLines[1][0]},${gearLines[1][1]},${gearLines[1][2]},${gearLines[2][0]},${gearLines[2][1]},${gearLines[2][2]},${gearLines[3][0]},${gearLines[3][1]},${gearLines[3][2]}\n`);
             }
         }
 
