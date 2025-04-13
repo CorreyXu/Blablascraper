@@ -61,12 +61,12 @@ console.log (finalCookieString)
 console.log(playersData.players[1].name)
 const playerlink = playersData.players[1].link
 const playeruid = playersData.players[1].uid
-console.log(unitData.units[2].name)
-const unit = unitData.units[2]
+console.log(unitData.units[6].name)
+const unit = unitData.units[6]
 console.log(unit)
-const unitid = unitData.units[0]?.name || "defaultUnitName"; // Use optional chaining and fallback
+const unitid = unitData.units[0]?.name || "defaultUnitName"; 
 
-const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // Ensure unitArray is an array
+const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; 
 
 (async () => {
     let result
@@ -97,9 +97,16 @@ const unitArray = Array.isArray(unit.ids) ? unit.ids : ["defaultUnitArray"]; // 
         }
         
         const flatten = Object.values(characterMap).flat();
-        const lastfour = flatten.slice(-4);
+        //console.log("helppp", JSON.stringify(flatten,null,4));
+        const lastfour = []
+        for(const equip_id in flatten){
+            const index = String(flatten[equip_id].equip_id)[1];
+            lastfour[index] = flatten[equip_id];
+        }
 
-        //console.log("helppp", JSON.stringify(lastfour,null,4));
+  
+
+        
         
         
         // Now sum IncElementDmg values from valid equips only
